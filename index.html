@@ -29,6 +29,8 @@
     .canvas-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}.canvas-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:var(--shadow)}.canvas-card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:16px}.canvas-card h4{font-size:18px;color:var(--navy);margin:0}.canvas-kicker{font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--blue)}.canvas-status{font-size:10px;font-weight:800;color:#64748b;background:#f1f4f9;padding:5px 9px;border-radius:99px;white-space:nowrap}
     .canvas-cells{display:grid;grid-template-columns:1fr 1fr;gap:9px}.canvas-cell{border-radius:13px;padding:13px;background:#f5f7fb;border:1px solid #e9edf4}.canvas-cell h5{font-family:Manrope,sans-serif;font-size:11px;color:var(--navy);margin:0 0 7px;letter-spacing:-.01em}.canvas-cell p{font-size:11px;line-height:1.55;color:#526078;margin:0}.canvas-cell ul{padding-left:15px;margin:0;color:#526078;font-size:11px;line-height:1.55}.canvas-cell li+li{margin-top:4px}.canvas-cell.emphasis{background:#edf3ff;border-color:#dbe5ff}.canvas-cell.emphasis h5{color:var(--blue)}.canvas-note{font-size:10px;color:#8490a2;margin:12px 0 0;line-height:1.5}.canvas-outcome{margin-top:16px;padding:16px 18px;background:var(--navy);color:#fff;border-radius:15px}.canvas-outcome strong{display:block;font-family:Manrope,sans-serif;font-size:13px;margin-bottom:4px}.canvas-outcome p{font-size:11px;color:#c4d0e2;margin:0}.value-prop-callout{margin-top:20px;border:1px solid #dce5f3;border-radius:18px;padding:20px 22px;background:linear-gradient(120deg,#fff,#f3f7ff)}.value-prop-callout h4{font-size:16px;color:var(--navy);margin:0 0 7px}.value-prop-callout p{font-size:12px;color:#526078;margin:0}
     @media(max-width:760px){.canvas-grid{grid-template-columns:1fr}.canvas-card{padding:17px}.canvas-cells{gap:7px}.canvas-cell{padding:11px}}
+    .original-canvas-card{min-width:0}.canvas-image-link{display:block;background:#f5f7fb;border:1px solid var(--line);border-radius:13px;overflow:hidden}.canvas-original-image{width:100%;height:auto;max-height:620px;object-fit:contain;display:block}.original-canvas-card .text-link{display:inline-block;margin-top:2px}
+
 
   </style>
 </head>
@@ -207,26 +209,22 @@
           <h3>Understanding the user before building the solution.</h3>
           <p>Alongside developing the JKKE Automated Costing System, I explored the problem through Value Proposition Canvas and Empathy Map Canvas. I created the canvas presentation using Google NotebookLM and presented the work, receiving positive feedback.</p>
         </div>
-        <div class="canvas-grid">
-          <article class="canvas-card">
-            <div class="canvas-card-head"><div><div class="canvas-kicker">01 / Customer understanding</div><h4>JKKE Empathy Map Canvas</h4></div><span class="canvas-status">Project showcase</span></div>
-            <div class="canvas-cells">
-              <div class="canvas-cell"><h5>THINKS</h5><ul><li>Cost estimates need to be accurate and consistent.</li><li>Calculations and BQ details must be checked before submission.</li></ul></div>
-              <div class="canvas-cell"><h5>FEELS</h5><ul><li>Pressure to avoid costing mistakes.</li><li>More confident when information and calculations are structured.</li></ul></div>
-              <div class="canvas-cell"><h5>SAYS</h5><ul><li>Needs a clear, dependable costing workflow.</li><li>Needs figures that are easier to review and verify.</li></ul></div>
-              <div class="canvas-cell"><h5>DOES</h5><ul><li>Collects project information and prepares BQ.</li><li>Calculates, checks and coordinates costing details.</li></ul></div>
-            </div>
-            <p class="canvas-note">Working empathy-map summary based on the project workflow. These are paraphrased user perspectives, not verbatim interview quotations.</p>
+        <div class="canvas-grid original-canvas-grid">
+          <article class="canvas-card original-canvas-card">
+            <div class="canvas-card-head"><div><div class="canvas-kicker">01 / Customer understanding</div><h4>JKKE Empathy Map Canvas</h4></div><span class="canvas-status">Original project canvas</span></div>
+            <a class="canvas-image-link" href="JKKE%20Empathy%20Map%20Canvas.png" target="_blank" rel="noopener" aria-label="Open original JKKE Empathy Map Canvas image">
+              <img class="canvas-original-image" src="JKKE%20Empathy%20Map%20Canvas.png" alt="Original JKKE Empathy Map Canvas designed for the Automated Costing System project" loading="lazy">
+            </a>
+            <p class="canvas-note">Original canvas design created for the JKKE Automated Costing System project. Select the image to view it at full size.</p>
+            <a class="text-link" href="JKKE%20Empathy%20Map%20Canvas.png" target="_blank" rel="noopener">View full-size canvas <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
           </article>
-          <article class="canvas-card">
-            <div class="canvas-card-head"><div><div class="canvas-kicker">02 / Solution fit</div><h4>JKKE Value Proposition Canvas</h4></div><span class="canvas-status">Project showcase</span></div>
-            <div class="canvas-cells">
-              <div class="canvas-cell"><h5>CUSTOMER JOBS</h5><ul><li>Prepare electrical project cost estimates and BQ.</li><li>Review quantities, calculations and costing outputs.</li></ul></div>
-              <div class="canvas-cell"><h5>PAINS</h5><ul><li>Repetitive manual calculations.</li><li>Risk of input and processing errors.</li><li>Time spent checking figures.</li></ul></div>
-              <div class="canvas-cell"><h5>GAINS</h5><ul><li>More consistent costing outputs.</li><li>Less repetitive manual work.</li><li>Clearer review and verification.</li></ul></div>
-              <div class="canvas-cell emphasis"><h5>VALUE MAP</h5><ul><li>Automated costing workflow.</li><li>Structured inputs and calculation logic.</li><li>Database integration to support organised records.</li></ul></div>
-            </div>
-            <div class="canvas-outcome"><strong>Value delivered</strong><p>A more structured costing process designed to reduce manual handling and improve calculation consistency. The project outcome recorded a 50% reduction in manual costing processing errors.</p></div>
+          <article class="canvas-card original-canvas-card">
+            <div class="canvas-card-head"><div><div class="canvas-kicker">02 / Solution fit</div><h4>JKKE Value Proposition Canvas</h4></div><span class="canvas-status">Original project canvas</span></div>
+            <a class="canvas-image-link" href="JKKE%20Value%20Proposition%20Canvas.png" target="_blank" rel="noopener" aria-label="Open original JKKE Value Proposition Canvas image">
+              <img class="canvas-original-image" src="JKKE%20Value%20Proposition%20Canvas.png" alt="Original JKKE Value Proposition Canvas designed for the Automated Costing System project" loading="lazy">
+            </a>
+            <p class="canvas-note">Original value proposition design created for the JKKE Automated Costing System project. Select the image to view it at full size.</p>
+            <a class="text-link" href="JKKE%20Value%20Proposition%20Canvas.png" target="_blank" rel="noopener">View full-size canvas <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
           </article>
         </div>
         <div class="value-prop-callout">
